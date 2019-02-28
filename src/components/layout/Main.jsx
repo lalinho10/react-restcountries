@@ -5,7 +5,7 @@ import TableBody from '../table/TableBody';
 
 const Main = ( props ) => {
     return (
-        <div className="row">
+        <div className="row mb-4">
             <div className="col-sm-12">
                 <table className="table">
                     <TableHeader />

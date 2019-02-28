@@ -1,10 +1,10 @@
 import React from 'react';
 
-import logo from '../../logo.svg';
+import logo from '../../logo.png';
 
 const Header = () => {
     return (
-        <div className="row">
+        <div className="row mt-4 mb-4">
             <div className="col-sm-10">
                 <h1>Países</h1>
                 <h2>ReactJS Rest API</h2>
