@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-import Header from './components/Header';
+import Header from './components/layout/Header';
+import Main from './components/layout/Main';
 
 class App extends Component {
     constructor( props ) {
@@ -26,39 +27,10 @@ class App extends Component {
     render() {
         const { data } = this.state;
 
-        const countries = data.map( ( country ) => {
-            return (
-                <tr key={ country.alpha3Code }>
-                    <td>
-                        { country.name }
-                    </td>
-                    <td>
-                        <img src={ country.flag } width="30" alt="flag" />
-                    </td>
-                    <td>
-                        { country.languages[ 0 ].name }
-                    </td>
-                </tr>
-            );
-        });
-
         return (
             <div className="container">
                 <Header />
-                <div>
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>País</th>
-                                <th>Bandera</th>
-                                <th>Idioma</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            { countries }
-                        </tbody>
-                    </table>
-                </div>
+                <Main countries={ data } />
             </div>
         );
     }
